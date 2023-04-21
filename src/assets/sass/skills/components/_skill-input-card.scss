@@ -95,7 +95,11 @@
                 margin: 0; 
             }
 
-            & input[type=number] { -moz-appearance:textfield; }
+            & input[type=number] { 
+                -webkit-appearance: textfield;
+                -moz-appearance:textfield; 
+                appearance: textfield;
+            }
         }
     }
     & .skill-input-card-text{

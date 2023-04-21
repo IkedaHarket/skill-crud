@@ -1,7 +1,7 @@
 <form class="skill-input-card" [formGroup]="skillForm" >
     <div class="skill-input-card__cover-add-button" #coverAddButton *ngIf="!skillToEdit">
         <button mat-fab matTooltip="Agregar Habilidad" class="bg-green-300" (click)="handlerCoverButton('hide')">
-            <mat-icon aria-hidden="false" aria-label="plus-add" fontIcon="add"></mat-icon>
+            <mat-icon aria-hidden="false" aria-label="plus-add" fontIcon="add">add</mat-icon>
         </button>
     </div>
     <button 
@@ -11,7 +11,7 @@
         class="skill-input-card-edit-volver"
         (click)="exitEditMode.emit(true)"
     >
-        <mat-icon aria-hidden="false" aria-label="edit-icon" fontIcon="arrow_forward"></mat-icon>
+        <mat-icon aria-hidden="false" aria-label="edit-icon" fontIcon="arrow_forward">arrow_forward</mat-icon>
     </button>
     <app-pick-color (color)="changeColor($event)"></app-pick-color>
     <div class="skill-input-card__percent">
@@ -22,18 +22,18 @@
             ></circle>
         </svg>
         <div class="skill-input-card__percent-number">
-            <input type="number" formControlName="percentage" onClick="this.select()" class="c-input"/> 
+            <input title="percentage" type="number" formControlName="percentage" onClick="this.select()" class="c-input"/> 
             <span>%</span>
         </div>
     </div>
     <input type="text" class="c-input skill-input-card-text" formControlName="title" placeholder="Title">
     <div class="skill-input-card-footer">
         <button mat-mini-fab [matTooltip]="skillToEdit ? 'Borrar' : 'Cerrar'" color="warn" (click)="remove()">
-            <mat-icon *ngIf="skillToEdit" aria-hidden="false" aria-label="delete-icon" fontIcon="delete"></mat-icon>
-            <mat-icon *ngIf="!skillToEdit" aria-hidden="false" aria-label="close-icon" fontIcon="close"></mat-icon>
+            <mat-icon *ngIf="skillToEdit" aria-hidden="false" aria-label="delete-icon" fontIcon="delete">delete</mat-icon>
+            <mat-icon *ngIf="!skillToEdit" aria-hidden="false" aria-label="close-icon" fontIcon="close">close</mat-icon>
         </button>
         <button mat-mini-fab matTooltip="Guardar" class="bg-green-300" (click)="save()">
-            <mat-icon aria-hidden="false" aria-label="save-icon" fontIcon="save"></mat-icon>
+            <mat-icon aria-hidden="false" aria-label="save-icon" fontIcon="save">save</mat-icon>
         </button>
     </div>
 </form>
