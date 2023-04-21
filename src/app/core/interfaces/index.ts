@@ -1,0 +1,9 @@
+export { Skill } from './skill.interface';
+export { CreateSkillDTO } from './create-skill-dto.interface';
+export { MenuItem } from "./menu-item.interface";
+export { ErrorAPI } from "./error-api.interface";
+export { DisplayAlertOptions } from "./display-alert-options.interface";
+export { Contact } from "./contact.interface";
+export { SocialNetwork } from "./social-network.interface";
+export { WebPage } from "./web-page.interface";
+export { Configuration } from "./configuration.interface";

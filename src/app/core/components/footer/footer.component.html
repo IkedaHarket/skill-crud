@@ -1,0 +1,25 @@
+<footer class="footer">
+    <svg class="footer__curva" viewBox="0 0 1440 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 79L60 63C120 47 240 15 360 4.30001C480 -5.99999 600 4 720 25.7C840 47 960 79 1080 84.3C1200 90 1320 68 1380 57.7L1440 47V143H1380C1320 143 1200 143 1080 143C960 143 840 143 720 143C600 143 480 143 360 143C240 143 120 143 60 143H0V79Z" fill="#000000"/>
+    </svg>
+    <div class="footer__container">
+        <app-maple-leaf weight="250"></app-maple-leaf>
+        <div class="contact" *ngIf="configuration.configuration$ | async as configuration">
+            <span class="social-network">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/598px-WhatsApp_icon.png" alt="whatsapp-icon">
+                {{configuration.contact.whatsapp}}
+            </span>
+            <span class="social-network">
+                <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="gmail-icon">
+                {{configuration.contact.email}}
+            </span>
+            <span
+                *ngFor="let socialNetwork of configuration.socialNetwork"
+                class="social-network"
+            >
+                <img [src]="socialNetwork.icon" alt="">
+                <a [href]="socialNetwork.url">{{socialNetwork.name}}</a>
+            </span>
+        </div>
+    </div>
+</footer>
