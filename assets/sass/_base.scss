@@ -1,0 +1,28 @@
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.swal2-loader{
+    border-color: $primary-color rgba(0,0,0,0) $primary-color rgba(0,0,0,0) !important;
+}
+.page{
+    min-height: $page-height;
+    margin: 0 0 2rem 0;
+    padding: 0 $page-padding 10rem $page-padding;
+}
+.bg-green-300{
+    background-color: $green-color-300 !important;
+}
+.bg-green-500{
+    background-color: $green-color-500 !important;
+}
